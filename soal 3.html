@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>3</title>
+	<script type="text/javascript">
+		function ast(){
+			var a=document.getElementById('kar').value;
+			var b=parseInt(document.getElementById('angka').value);
+			for(x=1;x<=b;x++){
+				for(y=1;y<=b;y++){
+					if(x==1 || x==b || y==1 || y==b){
+						document.getElementById('cetak').innerHTML+=a;
+					}
+					else{
+						document.getElementById('cetak').innerHTML+="&nbsp";
+					}
+				}document.getElementById('cetak').innerHTML+="<br>";
+			}
+		}
+
+		function hps(){
+			var k=document.getElementById('kar').value="";
+			var ang=document.getElementById('angka').value="";
+			var cet=document.getElementById('cetak').innerHTML="";
+		}
+	</script>
+</head>
+<body>
+	Masukan Karakter : 
+	<input type="text" id="kar">
+	<br>
+	Masukan Jumlah : 
+	<input type="text" id="angka">
+	<br>
+	<input type="button" value="Ok" onclick="ast()">
+	<input type="button" value="reset" onclick="hps()">
+
+<br><br>
+<label id="cetak"></label>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>2</title>
+	<script type="text/javascript">
+	  function cet(){
+		nam();
+		addr();
+		jenisk();
+		hob();
+	 }
+
+	  function nam(){
+		var a=document.getElementById('nama').value;
+		document.getElementById('onama').value=a;
+	 }
+	  function addr(){
+		var ad=document.getElementById('alamat').value;
+		document.getElementById('oalamat').value=ad;
+	 }
+	function jenisk(){
+		var b=document.getElementsByName('jk');
+		for(c=0;c<b.length;c++){
+			if(b[c].checked){
+				document.getElementById('ojk').value=b[c].value;
+			}
+		}
+	}		
+	/*function hob(){
+		var z=document.getElementsByName('hobi');
+		for(y=0;y<z.length;y++){
+			if(z[y].checked)
+				document.getElementById('ohobi').value+=z[y].value.value+" ";
+			}
+	 	}
+	 }*/	
+
+	/*  function rel(){
+		var y=prompt("Masukan Jumlah Agama");
+		var z=document.getElementById('pil');
+		for(x=1;x<=y;x++){
+			var s=document.createElement('option');
+			var d=prompt("Agama ke-"x);
+			var r=document.createTextNode(d);
+			s.appendChild(r);
+			z.appendChild(s);
+	 	}
+	 }*/	
+	</script>
+</head>
+<body onload="rel()">
+	<h1>Pendaftaran Mahasiswa</h1>
+	<table>
+		<tr>
+			<td>Nama</td>
+			<td>:</td>
+			<td><input type="text" id="nama"></td>
+		</tr>
+
+		<tr>
+			<td>Alamat</td>
+			<td>:</td>
+			<td><input type="text" id="alamat"></td>
+		</tr>
+
+		<tr>
+			<td>Agama</td>
+			<td>:</td>
+			<td>
+				<select id="pil">
+
+				</select>
+/*	<script>
+	  function rel(){
+		var y=prompt("Masukan Jumlah Agama");
+		var z=document.getElementById('pil');
+		for(x=1;x<=y;x++){
+			var s=document.createElement('option');
+			var d=prompt("Agama ke-"x);
+			var r=document.createTextNode(d);
+			s.appendChild(r);
+			z.appendChild(s);
+	 	}
+	 }	
+	</script>*/
+			</td>
+		</tr>
+
+		<tr>
+			<td>Jenis Kelamin</td>
+			<td>:</td>
+			<td>
+				<input type="radio" name="jk" value="Laki-Laki">L
+				<input type="radio" name="jk" value="Perempuan">P
+			</td>
+		</tr>
+
+		<tr>
+			<td>Hobi</td>
+			<td>:</td>
+			<td>
+				<input type="checkbox" name="hobi" value="Berenang">Berenang
+				<input type="checkbox" name="hobi" value="Membaca">Membaca
+				<input type="checkbox" name="hobi" value="Mengaji">Mengaji
+				<input type="checkbox" name="hobi" value="Lainnya">Lainnya
+			</td>
+		</tr>
+	</table>
+	
+		<input type="button" onclick="cet()" value="cetak">
+	
+	<table border=1>
+		<tr>
+			<td>Nama</td>
+			<td>:</td>
+			<td><input type="text" id="onama" readonly></td>
+		</tr>
+
+		<tr>
+			<td>Alamat</td>
+			<td>:</td>
+			<td><input type="text" id="oalamat" readonly></td>
+		</tr>
+
+		<tr>
+			<td>Agama</td>
+			<td>:</td>
+			<td>
+				<input type="text" id="oagama" readonly>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Jenis Kelamin</td>
+			<td>:</td>
+			<td>
+				<input type="text" id="ojk" readonly>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Hobi</td>
+			<td>:</td>
+			<td>
+				<input type="text" id="ohobi" readonly>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

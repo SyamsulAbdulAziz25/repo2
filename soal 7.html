@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>7</title>
+	<style>
+	#kotak{
+		width:50px;
+	height:50px;}
+	</style>
+<script>
+	function tampil(id){
+		if(id=="merah"){
+		document.getElementById(id).style.background="red";
+		document.getElementById(id).style.color="white";
+		}
+		else if(id=="kuning"){
+		document.getElementById(id).style.background="yellow";
+		document.getElementById(id).style.color="white";
+		}
+		else if(id=="hijau"){
+		document.getElementById(id).style.background="green";
+		document.getElementById(id).style.color="white";
+		}
+		else if(id=="biru"){
+		document.getElementById(id).style.background="blue";
+		document.getElementById(id).style.color="white";
+		}
+	
+		else if(id=="ungu"){
+		document.getElementById(id).style.background="lavender";
+		document.getElementById(id).style.color="white";
+		}
+	}
+	function balik(id){
+		document.getElementById(id).style.background="grey";
+		document.getElementById(id).style.color="white";
+	}
+</script>
+</head>
+<body>
+<div id="kotak">
+	<div id="merah" style="background-color: grey;color:white;" onmouseover="tampil('merah')" onmouseout="balik('merah')">merah</div>
+	<div id="kuning" style="background-color: grey;color:white;" onmouseover="tampil('kuning')" onmouseout="balik('kuning')">kuning</div>
+	<div id="hijau" style="background-color: grey;color:white;" onmouseover="tampil('hijau')" onmouseout="balik('hijau')">hijau</div>
+	<div id="biru" style="background-color: grey;color:white;" onmouseover="tampil('biru')" onmouseout="balik('biru')">biru</div>
+	<div id="ungu" style="background-color: grey;color:white;" onmouseover="tampil('ungu')" onmouseout="balik('ungu')">Ungu</div>
+</div>
+	
+</body>
+</html>
